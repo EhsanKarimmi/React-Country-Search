@@ -1,5 +1,5 @@
 function Details() {
-    return <div>Details</div>;
+    return <div>Details Page</div>;
 }
 
 export default Details;
