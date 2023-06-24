@@ -18,7 +18,14 @@ function Home() {
         fetch("https://restcountries.com/v3.1/all")
             .then((response) => response.json())
             .then((data) => {
-                setCountries(data);
+                // Sort Data By Country Name.
+                const sortedData = data.sort((countryOne, countryTwo) => {
+                    if (countryOne.name.common < countryTwo.name.common) {
+                        return -1;
+                    }
+                });
+                // Save Sorted Data In State.
+                setCountries(sortedData);
                 setLoading(false);
             })
             .catch((error) => {
@@ -46,7 +53,7 @@ function Home() {
                     <div className="grid grid-cols-6 gap-4 mt-10">
                         {filterCountries.map((country) => {
                             return (
-                                <Link key={country.name.common} to="/details">
+                                <Link key={country.name.common} to="/details" state={country}>
                                     <CountryCard country={country} />
                                 </Link>
                             );
