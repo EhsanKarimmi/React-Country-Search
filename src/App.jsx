@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
     return (
-        <main className="w-screen h-screen bg-gray-100 dark:bg-gray-800 p-2">
+        <main className="bg-gray-100 dark:bg-gray-800 p-2">
             <BrowserRouter>
                 <Navbar />
                 <Routes>

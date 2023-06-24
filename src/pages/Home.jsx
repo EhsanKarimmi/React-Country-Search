@@ -35,21 +35,23 @@ function Home() {
             ) : (
                 <>
                     {/* SearchBar */}
-                    <div className=" mt-4  flex justify-center items-center bg-green-500">
+                    <div className="flex justify-center items-center mt-5">
                         <input
                             type="text"
-                            className="bg-gray-600 dark:bg-gray-900  outline-none rounded-xl "
+                            className="bg-gray-300 placeholder-gray-600 outline-none rounded-lg py-3 px-4 w-1/4 font-medium"
                             placeholder="Search For A Country..."
                             onChange={(event) => setSearch(event.target.value)}
                         />
                     </div>
-                    {filterCountries.map((country, index) => {
-                        return (
-                            <Link key={index}>
-                                <CountryCard country={country} />
-                            </Link>
-                        );
-                    })}
+                    <div className="grid grid-cols-6 gap-4 mt-10">
+                        {filterCountries.map((country) => {
+                            return (
+                                <Link key={country.name.common} to="/details">
+                                    <CountryCard country={country} />
+                                </Link>
+                            );
+                        })}
+                    </div>
                 </>
             )}
         </div>
