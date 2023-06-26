@@ -10,7 +10,7 @@ function App() {
             <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    <Route exact path="/" element={<Home />} />
+                    <Route exact path="/React-Country-Search/" element={<Home />} />
                     <Route path="details" element={<Details />} />
                     <Route path="*" element={<Page404 />} />
                 </Routes>
