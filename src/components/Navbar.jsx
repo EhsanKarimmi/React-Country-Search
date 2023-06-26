@@ -24,7 +24,7 @@ function Navbar() {
             <Link to="/">
                 <div className="flex justify-center items-center gap-2  cursor-pointer">
                     <img src={worldIcon} alt="World Icon" className="w-10" />
-                    <p className="uppercase text-lg font-semibold text-gray-800">
+                    <p className="uppercase text-lg font-semibold text-gray-100 dark:text-gray-800">
                         Country Searcher
                     </p>
                 </div>

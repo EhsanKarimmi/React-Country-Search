@@ -4,29 +4,28 @@ import { IoIosArrowBack } from "react-icons/io";
 
 function Details() {
     const { state } = useLocation();
-    console.log(state);
     const navigate = useNavigate();
 
     return (
         // Details Page Container.
-        <div className=" ">
+        <div className=" bg-transparent">
             {/* Back To Home Button */}
-            <div className="mt-5 font-medium">
+            <div className="mt-5 font-medium ">
                 <button
-                    className="flex justify-center items-center group py-2 px-5 gap-1 rounded-md border-2 border-[#42C2FF] hover:bg-[#42C2FF] transition-all duration-300"
+                    className="flex justify-center items-center group py-2 px-5 gap-1 rounded-md border-2 border-[#42C2FF] hover:bg-[#42C2FF] transition-all duration-200 text-black dark:text-white"
                     onClick={() => navigate(-1)}
                 >
-                    <IoIosArrowBack className="group-hover:scale-125 transition-all duration-300 " />
+                    <IoIosArrowBack className="group-hover:scale-125 transition-all duration-200 " />
                     <span>Back</span>
                 </button>
             </div>
             {/* Country Details */}
-            <div className="-300 grid grid-cols-2 mt-5 ">
+            <div className="-300 grid grid-cols-2 mt-5 text-black dark:text-white">
                 <div className=" flex justify-start items-center">
                     <img
                         src={state.flags.png}
                         alt=""
-                        className="h-96 w-5/6 rounded-md border-2 border-gray-400"
+                        className="h-96 w-5/6 rounded-md border-2 border-gray-400 dark:border-gray-950"
                     />
                 </div>
                 <div className="space-y-4">
@@ -54,14 +53,14 @@ function Details() {
                         <a
                             href={state.maps.googleMaps}
                             target="_blank"
-                            className="py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-700"
+                            className="py-2 px-4 bg-blue-500 text-white dark:text-gray-800 rounded-md hover:bg-blue-700"
                         >
                             View on the google Maps
                         </a>
                         <a
                             href={state.maps.openStreetMaps}
                             target="_blank"
-                            className="py-2 px-4 bg-blue-500 text-white rounded-md "
+                            className="py-2 px-4 bg-blue-500 text-white dark:text-gray-800  rounded-md hover:bg-blue-700"
                         >
                             View on the openStreet Maps
                         </a>

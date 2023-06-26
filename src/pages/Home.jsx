@@ -45,9 +45,10 @@ function Home() {
                     <div className="flex justify-center items-center mt-5">
                         <input
                             type="text"
-                            className="bg-gray-300 placeholder-gray-600 outline-none rounded-lg py-3 px-4 w-1/4 font-medium"
+                            className="bg-gray-300 dark:bg-gray-700 placeholder-gray-600 dark:placeholder-gray-400 text-black dark:text-white outline-none rounded-lg py-3 px-4 w-1/4 font-medium"
                             placeholder="Search For A Country..."
                             onChange={(event) => setSearch(event.target.value)}
+                            autoFocus
                         />
                     </div>
                     <div className="grid grid-cols-6 gap-4 mt-10">
