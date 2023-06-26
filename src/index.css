@@ -13,3 +13,20 @@ body * {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #42c2ff;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #146c94;
+}
